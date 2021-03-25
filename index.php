@@ -5,11 +5,13 @@
 <?php
 include __DIR__ . '/funcs.php';
 
-$comments = get_comment();
+$comments = get_comments();
 
 if(isset($comments)) {
-        $comment = implode('<br/>',$comments);
-        echo $comment;
+    foreach ($comments as $value){
+            
+        echo '<pre>' . $value . '</pre>';
+    }
 }
 ?>
 
