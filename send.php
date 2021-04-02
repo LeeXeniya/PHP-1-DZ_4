@@ -7,6 +7,6 @@ if(!empty($str)) {
     $comments = get_comments();
     $comments[] = $str;
     $com = implode(PHP_EOL, $comments);
-    file_put_contents(__DIR__ . '/data/text.txt', $com);
+    file_put_contents(__DIR__ . '/text.txt', $com);
     header('Location: http://localhost:8008/index.php');
 }
